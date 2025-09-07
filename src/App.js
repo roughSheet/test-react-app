@@ -2,9 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import MyTest from './component/MyTest';
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const [check, setCheck] = useState(2)
+
+  const incre = () => {
+
+  };
 
   return (
     <>
@@ -21,13 +28,16 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.js</code> and save to test HMR
-        </p>
+        <br></br>
+        <br></br>
+        <button onClick={() => setCheck((check) => check +1)}>
+          check is increasing {check}
+        </button>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <MyTest></MyTest>
     </>
   )
 }
